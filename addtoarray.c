@@ -17,9 +17,4 @@ void add_to_array(char *book_title, int number_of_books){
   }
   // Manually inject the null value
   *book_title = '\0';
-
-  // Print book titles
-  for (int i = 0; i < number_of_books; i++) {
-    printf("%d. %s\n", (i + 1), (start + i));
-  }
 }

@@ -7,12 +7,13 @@
 int read_titles(char ***list_of_books) {
   int number_of_books;
   scanf("%d", &number_of_books);
+  getchar();
 
   // if number_of_books is larger than or equal to 1,
   // allocate a size in an array and make the 
   char **book_titles = calloc(number_of_books, sizeof(char*));
   if (number_of_books >= 1) {
-    printf("Enter the %d book titles one line at a time: ", number_of_books);
+    printf("Enter the %d book titles one to a line: ", number_of_books);
     for (int i = 0; i < (int)number_of_books; i++) {
       *(book_titles + i) = calloc(1, 61);
       add_to_array(*(book_titles + i), number_of_books);

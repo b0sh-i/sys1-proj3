@@ -38,6 +38,11 @@ savedata.o: savedata.c
 project3main.o: project3main.c
 	gcc $(gcc_opt) -o project3main.o project3main.c
 
+# create addtoarray.o 
+
+addtoarray.o:
+	gcc $(gcc_opt) -o addtoarray.o addtoarray.c
+
 # clear all files made by makefile
 
 clean:
