@@ -6,7 +6,7 @@
 void add_to_array(char *book_title, int number_of_books){
   char books;
   char *start = book_title;
-  scanf("%c", &books);
+  scanf(" %c", &books);
 
   // While the char in books does not equal '\n'
   // Add the value to the index of the array.

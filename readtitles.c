@@ -7,7 +7,6 @@
 int read_titles(char ***list_of_books) {
   int number_of_books;
   scanf("%d", &number_of_books);
-  getchar();
 
   // if number_of_books is larger than or equal to 1,
   // allocate a size in an array and make the 
