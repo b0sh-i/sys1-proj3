@@ -3,17 +3,20 @@
 #include "project3.h"
 
 
-void add_to_array(char *book_title, int number_of_books){
-  char books;
-  scanf(" %c", &books);
+void add_to_array(char **book_title){
+  char *books = calloc(1, 61);
+  char *front = books;
+  char user_input;
+  scanf(" %c", &user_input);
 
   // While the char in books does not equal '\n'
   // Add the value to the index of the array.
-  while (books != '\n') {
-    *book_title = books;
-    book_title++;
-    scanf("%c", &books);
+  
+  while (user_input != '\n') {
+    *books++ = user_input;
+    scanf("%c", &user_input);
   }
   // Manually inject the null value
-  *book_title = '\0';
+  *books = '\0';
+  *book_title = front;
 }

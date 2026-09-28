@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "project3.h"
-#include "addtoarray.c"
 
 // Prompt the user for siz of book list, make an array contanining all of the books
 int read_titles(char ***list_of_books) {
@@ -14,8 +13,7 @@ int read_titles(char ***list_of_books) {
   if (number_of_books >= 1) {
     printf("Enter the %d book titles one to a line: ", number_of_books);
     for (int i = 0; i < (int)number_of_books; i++) {
-      *(book_titles + i) = calloc(1, 61);
-      add_to_array(*(book_titles + i), number_of_books);
+      add_to_array(book_titles + i);
     }
   }
 
