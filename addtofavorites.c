@@ -8,11 +8,12 @@ void add_to_favorites(char ***favorite_books, char **book_ptr, int number_of_fav
   char **front = books;
   char user_input;
   int movement = 0;
-  scanf("%c", &user_input);
+  scanf(" %c", &user_input);
 
   while (user_input != ' ' && user_input != '\n') {
-    movement = (((int)(user_input)) - 1);
-    *books++ = (*book_ptr + movement);
+    // Convert char representation to the actual digit
+    movement = (user_input - '0') - 1;
+    *books++ = *(book_ptr + movement);
     scanf("%c", &user_input);
   }
   *favorite_books = front;

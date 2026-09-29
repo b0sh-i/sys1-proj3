@@ -11,5 +11,7 @@ int main() {
   print_list(&book_ptr, book_list_size);
   int favorites_list_size = get_favorites(book_list_size, book_ptr, &favorites_ptr);
   print_favorites(&favorites_ptr, favorites_list_size);
+  printf("Do you want to save them (1=yes, 2=no): ");
+  save_data(book_ptr, favorites_ptr);
   return 0;
 }

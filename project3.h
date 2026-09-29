@@ -13,4 +13,6 @@ void print_list(char ***book_ptr, int book_list_size);
 
 int read_titles(char ***list_of_books);
 
+void save_data(char **book_ptr, char ***favorites_ptr);
+
 #endif
