@@ -3,8 +3,8 @@
 #include "project3.h"
 
 void print_list(char ***book_ptr, int book_list_size) {
-  printf("List of books:\n");
+  printf("\nYou've entered:\n");
   for (int i = 0; i < book_list_size; i++) {
-    printf("%d. %s\n", (i+1), *(*book_ptr+i));
+    printf("%d. %s\n", (i+1), *(*book_ptr + i));
   }
 }

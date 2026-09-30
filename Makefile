@@ -8,13 +8,13 @@ all: project3 project3Readme project3.zip project3main readtitles getfavorites s
 
 # The .zip file to submit to Carmen
 
-project3.zip: Makefile project3Readme project3 project3.h project3main.c getfavorites.c readtitles.c savedata.c addtoarray.c addtofavorites.c printlist.c
+project3.zip: Makefile project3Readme project3 project3.h project3main.c getfavorites.c readtitles.c savedata.c printtofile.c addtoarray.c addtofavorites.c printlist.c freememory.c
 	zip project3 Makefile project3Readme project3 project3.h project3main.c getfavorites.c readtitles.c savedata.c
 
 # Compile all of the files into project3 executable
 
-project3: project3main.o getfavorites.o readtitles.o savedata.o addtoarray.o addtofavorites.o printlist.o printfavorites.o project3.h
-	gcc -o project3 project3main.o getfavorites.o readtitles.o savedata.o addtoarray.o addtofavorites.o printlist.o printfavorites.o
+project3: project3main.o getfavorites.o readtitles.o savedata.o addtoarray.o addtofavorites.o printlist.o printfavorites.o printtofile.o project3.h freememory.o
+	gcc -o project3 project3main.o getfavorites.o readtitles.o savedata.o addtoarray.o addtofavorites.o printlist.o printfavorites.o printtofile.o freememory.o
 
 # create project3main.o
 
@@ -37,6 +37,11 @@ readtitles.o: readtitles.c project3.h
 savedata.o: savedata.c project3.h
 	gcc $(gcc_opt) -o savedata.o savedata.c
 
+# create printtofile.o
+
+printtofile.o: printtofile.c project3.h
+	gcc $(gcc_opt) -o printtofile.o printtofile.c
+
 # create addtoarray.o 
 
 addtoarray.o: addtoarray.c project3.h
@@ -52,7 +57,14 @@ addtofavorites.o: addtofavorites.c project3.h
 printlist.o: printlist.c project3.h
 	gcc $(gcc_opt) -o printlist.o printlist.c
 
+# create printfavorites.o
 printfavorites.o: printfavorites.c project3.h
+	gcc $(gcc_opt) -o printfavorites.o printfavorites.c
+
+# create freememory.o 
+freememory.o: freememory.c project3.h
+	gcc $(gcc_opt) -o freememory.o freememory.c
+
 # clear all files made by makefile
 
 clean:
