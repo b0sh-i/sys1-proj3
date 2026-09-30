@@ -2,3 +2,18 @@ BY SUBMITTING THIS FILE TO CARMEN, I CERTIFY THAT I HAVE
 STRICTLY ADHERED TO THE TENURES OF THE 
 OHIO STATE UNIVERSITY'S ACADEMIC INTEGRITY POLICY. 
 
+Bodhi Bouttamy
+
+Time taken: ~11-12 hours
+
+Description:
+  Goodness me. Pointers are a bit difficult to grasp.
+
+Debugging:
+  Thankfully, most of the bugs I had were because I derefrenced the wrong pointers.
+  In order to confirm that I had freed all of the dynamically allocated memory, 
+  I set break points in both the read_titles and get_favorites functions. As well as the 
+  free_memory function. I then used the watch command I found in beej's GDB guide under hardware watchpoints
+  to follow my pointers through the program, specifically, *book_ptr and *favorites_ptr so I could watch the 
+  first pointer. Once I saw that the values were being freed, I could make an assumption that my code would pass the
+  Valgrind test.
