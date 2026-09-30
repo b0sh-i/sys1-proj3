@@ -1,8 +1,12 @@
+/* BY SUBMITTING THIS FILE TO CARMEN, I CERTIFY THAT I HAVE 
+* STRICTLY ADHERED TO THE TENURES OF THE 
+* OHIO STATE UNIVERSITY'S ACADEMIC INTEGRITY POLICY. 
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include "project3.h"
 
-// Adds the imputs to the array
+// Adds the imputs to the array of favorite books
 void add_to_favorites(char ***favorite_books, char **book_ptr, int number_of_favorites) {
   char **books = calloc(1, 61);
   char **front = books;

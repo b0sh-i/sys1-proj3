@@ -1,7 +1,12 @@
+/* BY SUBMITTING THIS FILE TO CARMEN, I CERTIFY THAT I HAVE 
+* STRICTLY ADHERED TO THE TENURES OF THE 
+* OHIO STATE UNIVERSITY'S ACADEMIC INTEGRITY POLICY. 
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include "project3.h"
 
+// Get the number of favorite books and use add_to_favorites function to create the list
 int get_favorites(int book_list_size, char **book_ptr, char ****favorites_ptr){
   // Grab entered size of input and 
   int number_of_favorites;

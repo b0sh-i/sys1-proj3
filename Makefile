@@ -1,15 +1,18 @@
+# BY SUBMITTING THIS FILE TO CARMEN, I CERTIFY THAT I HAVE
+# STRICTLY ADHERED TO THE TENURES OF THE
+# OHIO STATE UNIVERSITY'S ACADEMIC INTEGRITY POLICY.
+
 # Compile the program 
 
 gcc_opt = -std=c99 -pedantic -Wimplicit-function-declaration -Wreturn-type -Wformat -g -c
 
 # all target
 
-all: project3 project3Readme project3.zip project3main readtitles getfavorites savedata addtoarray addtofavorites printlist
-
+all: project3 project3Readme project3.zip
 # The .zip file to submit to Carmen
 
-project3.zip: Makefile project3Readme project3 project3.h project3main.c getfavorites.c readtitles.c savedata.c printtofile.c addtoarray.c addtofavorites.c printlist.c freememory.c
-	zip project3 Makefile project3Readme project3 project3.h project3main.c getfavorites.c readtitles.c savedata.c
+project3.zip: Makefile project3Readme project3 project3.h project3main.c getfavorites.c readtitles.c savedata.c printtofile.c addtoarray.c addtofavorites.c printlist.c freememory.c printfavorites.c
+	zip project3 Makefile project3Readme project3 project3.h project3main.c getfavorites.c readtitles.c savedata.c printtofile.c addtoarray.c addtofavorites.c printlist.c freememory.c printfavorites.c
 
 # Compile all of the files into project3 executable
 
